@@ -1,0 +1,2 @@
+1.select sum(City.Population), Country.Name from Country, City where Country.CountryID = City.CountryID group by Country.CountryID having sum(City.Population)>400;
+2.select co.Name from City ci, Country co where co.CountryID = ci.CountryID and (select Count(*) from Building  b where b.CityId == ci.CityId group by co.CountryID having count(*)=0);
